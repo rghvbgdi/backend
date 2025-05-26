@@ -44,7 +44,7 @@ const token = jwt.sign({ id: newuser._id , email }, process.env.SECRET_KEY,
 {expiresIn : '1h'}
 );
 newuser.token=token;
-newuser.password= undefined;
+newuser.password = undefined;
 res.status(200).json({message : 'You have succesfully registered!',user : newuser})
 
 }
